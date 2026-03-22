@@ -1,15 +1,14 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Link Next.js font variables to Tailwind's font utility classes */
+  --font-sans: var(--font-quattrocento-sans), sans-serif;
+  --font-serif: var(--font-quattrocento), serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Using the exact colors from your WhatFont screenshot */
+  --color-brand-sage: rgb(108, 119, 100);       /* Headings */
+  --color-brand-olive-dark: rgb(65, 73, 59);    /* Body text */
+  --color-brand-cream: #F8F7F5;                 /* We will keep this until you inspect the background! */
 }
 
 @media (prefers-color-scheme: dark) {
