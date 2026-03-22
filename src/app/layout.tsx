@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Quattrocento, Quattrocento_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
+import Partners from "@/components/sections/Partners";
 
 // Configure Quattrocento (Serif) for headings
 const quattrocento = Quattrocento({
@@ -32,7 +35,12 @@ export default function RootLayout({
     <html lang="en" className={`${quattrocento.variable} ${quattrocentoSans.variable}`}>
       {/* Updated text color to our new dark olive variable */}
       <body className="font-sans antialiased bg-brand-cream text-brand-olive-dark">
-        {children}
+        <Navbar />
+        <main>
+          {children}
+        </main>
+        <Partners />
+        <Footer />
       </body>
     </html>
   );
