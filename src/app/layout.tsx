@@ -22,7 +22,7 @@ const quattrocentoSans = Quattrocento_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Il Falconiere | Luxury Resort in Tuscany",
+  title: "Il Falconiere Relais & Spa Toscana - Il Falconiere",
   description: "A luxury wine resort and Michelin star restaurant in Cortona, Tuscany.",
 };
 
@@ -40,6 +40,7 @@ export default function RootLayout({
           {children}
         </main>
         <Partners />
+        <div className="border border-brand-sage/25"></div>
         <Footer />
       </body>
     </html>

@@ -1,7 +1,7 @@
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center">
+    <main className="min-h-screen bg-sky-300 flex flex-col items-center justify-center">
       <h1 className="font-serif text-[58px] leading-17.5 text-brand-sage mb-4">
         A love for the land
       </h1>

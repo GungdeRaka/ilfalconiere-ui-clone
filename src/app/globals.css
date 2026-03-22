@@ -8,7 +8,7 @@
   /* Using the exact colors from your WhatFont screenshot */
   --color-brand-sage: rgb(108, 119, 100);
   /* Headings */
-  --color-brand-olive-dark: rgb(65, 73, 59);
+  --color-brand-olive-dark: #41493C;
   /* Body text */
   --color-brand-cream: #F8F7F5;
   --color-accent-red-brown: #A65542;
@@ -40,7 +40,7 @@
 }
 
 .pulse-soft {
-  animation: pulse-soft 0.6s infinite;
+  animation: pulse-soft 0.9s infinite;
 }
 
 body {
