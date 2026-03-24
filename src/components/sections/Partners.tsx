@@ -14,22 +14,22 @@ export default function Partners() {
                 </div>
 
                 {/* ===== ROW 1 ===== */}
-                <div className="grid grid-cols-2 md:flex md:flex-wrap justify-items-center justify-center items-center gap-x-14 gap-y-12 mb-16  ">
+                <div className="grid grid-cols-2 md:flex md:flex-row justify-items-center justify-center items-center gap-x-14 md:gap-x-10 gap-y-12 mb-16  ">
 
-                    <Logo src="relais" w={45} h={50} />
+                    <Logo src="relais" w={65} h={75} />
                     <Logo src="virtuoso" w={110} h={40} />
                     {/* <Logo src="autentico" w={140} h={40} /> */}
                     <Logo src="autentico" w={120} h={20} />
                     <Logo src="affluent" w={120} h={30} />
                     <Logo src="celebrated" w={120} h={40} />
                     <Logo src="lesoste" w={60} h={60} />
-                    <div className="col-span-2 flex justify-center">
-                        <Logo src="serendipians" w={80} h={80} />
+                    <div className="col-span-2 md:col-span-1 flex justify-center">
+                        <Logo src="serendipians" w={76} h={76} />
                     </div>
                 </div>
 
                 {/* ===== ROW 2 ===== */}
-                <div className="grid grid-cols-2 md:flex md:flex-wrap justify-items-center justify-center items-center gap-x-16 gap-y-10 ">
+                <div className="grid grid-cols-2 md:flex md:flex-row justify-items-center justify-center items-center gap-x-16 gap-y-10 ">
 
                     <Logo src="michelin" w={70} h={40} />
                     <Logo src="internove" w={110} h={20} />

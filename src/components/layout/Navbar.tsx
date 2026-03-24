@@ -49,12 +49,12 @@ export default function Navbar() {
                 <div className="flex flex-col items-center justify-center">
                     <Link href="/" className="flex flex-col items-center gap-1">
                         <Image
-                            src="https://www.ilfalconiere.it/wp-content/uploads/2023/12/il-falconiere-logo-white.png"
+                            src="/logos/il-falconiere-logo-white.png"
                             alt="Il Falconiere Logo"
                             width={280}
                             height={40}
                             priority
-                            className="w-68 md:w-50 lg:w-68 h-auto object-contain"
+                            className="w-62 md:w-50 lg:w-68 h-auto object-contain"
                         />
                         {/* Extracted from your HTML snippet */}
                         <span className="font-sans text-[11px] tracking-[0.3em] uppercase">
@@ -67,12 +67,12 @@ export default function Navbar() {
                 <div className="hidden md:flex gap-2 lg:gap-4 items-center justify-end font-sans text-[11px] font-bold tracking-widest uppercase">
 
                     {/* Pulsing CTA Discount */}
-                    <Link href="#" className="flex md:hidden lg:block items-center group">
+                    <Link href="https://www.ilfalconiere.it/en/holiday-offers-tuscany/" className="flex md:hidden lg:block items-center group">
                         {/* The pulsing icon button structure */}
                         <div className="relative inline-block">
                             {/* CTA */}
-                            <Link
-                                href="https://www.ilfalconiere.it/en/holiday-offers-tuscany/"
+                            <div
+                                
                                 className="group flex items-center border border-white  bg-accent-red-brown/30 backdrop-blur-sm "
                             >
                                 {/* Icon + Pulse */}
@@ -91,7 +91,7 @@ export default function Navbar() {
                                 </div>
 
 
-                            </Link>
+                            </div>
                             {/* End CTA */}
                         </div>
                     </Link>
@@ -104,15 +104,15 @@ export default function Navbar() {
                 </div>
 
                 {/* CTA BOTTOM */}
-                <div className="top-94 md:top-132 lg:top-200 xl:hidden right-2 left-2 fixed flex items-between justify-between font-sans text-[11px] font-bold tracking-widest uppercase">
+                <div className="top-9/10 md:top-13/14 lg:hidden right-2 left-2 fixed flex items-between justify-between font-sans text-[11px] font-bold tracking-widest uppercase">
 
                     {/* Pulsing CTA Discount */}
-                    <Link href="#" className="flex  top-198 left-8 items-center group">
+                    <Link  href="https://www.ilfalconiere.it/en/holiday-offers-tuscany/" className="flex top-198 left-5 items-center group">
                         {/* The pulsing icon button structure */}
                         <div className="relative inline-block">
                             {/* CTA */}
-                            <Link
-                                href="https://www.ilfalconiere.it/en/holiday-offers-tuscany/"
+                            <div
+                               
                                 className="group flex items-center   bg-accent-red-brown/30 backdrop-blur-sm "
                             >
                                 {/* Icon + Pulse */}
@@ -131,7 +131,7 @@ export default function Navbar() {
                                 </div>
 
 
-                            </Link>
+                            </div>
                             {/* End CTA */}
                         </div>
                     </Link>

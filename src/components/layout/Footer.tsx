@@ -6,11 +6,11 @@ import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 export default function Footer() {
     // Extracted from your provided Elementor HTML
     const instagramFeed = [
-        "https://www.ilfalconiere.it/wp-content/uploads/inavii-social-feed/17871512916579103-m.jpg",
-        "https://www.ilfalconiere.it/wp-content/uploads/inavii-social-feed/18398760520144290-m.jpg",
-        "https://www.ilfalconiere.it/wp-content/uploads/inavii-social-feed/18109336264761953-m.jpg",
-        "https://www.ilfalconiere.it/wp-content/uploads/inavii-social-feed/18048282989716241-m.jpg",
-        "https://www.ilfalconiere.it/wp-content/uploads/inavii-social-feed/17933332587206279-m.jpg"
+   "/footer-images/first-post.jpg",
+   "/footer-images/second-post.jpg",
+   "/footer-images/third-post.jpg",
+   "/footer-images/fourth-post.jpg",
+   "/footer-images/fifth-post.jpg"
     ];
 
     return (
