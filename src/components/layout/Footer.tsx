@@ -34,7 +34,7 @@ export default function Footer() {
                         <div className="grid grid-cols-2 md:grid-cols-6 md:gap-0 gap-x-4 gap-y-6 text-[16px] font-extralight font-sans text-brand-sage tracking-tight leading-[1.8]">
 
                             {/* Col 1: Address */}
-                            <div className="flex flex-col col-span-2 leading-[1.4]">
+                            <div className="flex flex-col md:col-span-2 leading-[1.4]">
                                 <p>Loc. San Martino a <br className="hidden lg:block" />Bocena, 370 Cortona (AR)</p>
                                 <p>T +39.0575.612679</p>
                                 <p>F +39.0575.612927</p>
@@ -105,7 +105,7 @@ export default function Footer() {
                                         target="_blank"
                                         rel="noreferrer"
                                         key={index}
-                                        className={`relative aspect-square w-1/3 md:w-1/4 lg:w-1/7 rounded-lg overflow-hidden block group shadow-sm transition-transform duration-300 hover:scale-105 
+                                        className={`relative aspect-square w-1/3 md:w-1/5 lg:w-1/7 rounded-lg overflow-hidden block group shadow-sm transition-transform duration-300 hover:scale-105 
                                             ${index %2===0 ? "translate-y-7 md:-translate-y-7 lg:translate-y-7 " : ""} 
                                             ${index >= 3 ? "hidden lg:hidden md:block" : ""}
                                         `}

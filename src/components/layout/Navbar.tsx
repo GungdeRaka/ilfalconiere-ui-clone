@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-import { FaPercentage } from "react-icons/fa";
+import { CgMathPercent } from "react-icons/cg";
+import { IoMdSnow } from "react-icons/io";
 
 export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -23,7 +23,7 @@ export default function Navbar() {
                 }`}
         >
 
-            <div className="max-w-500 px-4 md:px-10 flex justify-between md:grid md:grid-cols-3 md:items-center">
+            <div className="max-w-500 px-4 md:px-6 flex justify-between md:grid md:grid-cols-3 md:items-center">
 
                 {/* COLUMN 1: Left Menu */}
                 <div className="flex flex-col">
@@ -46,7 +46,7 @@ export default function Navbar() {
                 </div>
 
                 {/* COLUMN 2: Center Logo */}
-                <div className="flex  flex-col items-center justify-center">
+                <div className="flex flex-col items-center justify-center">
                     <Link href="/" className="flex flex-col items-center gap-1">
                         <Image
                             src="https://www.ilfalconiere.it/wp-content/uploads/2023/12/il-falconiere-logo-white.png"
@@ -54,7 +54,7 @@ export default function Navbar() {
                             width={280}
                             height={40}
                             priority
-                        className="w-68 md:w-50 lg:w-68 h-auto object-contain"
+                            className="w-68 md:w-50 lg:w-68 h-auto object-contain"
                         />
                         {/* Extracted from your HTML snippet */}
                         <span className="font-sans text-[11px] tracking-[0.3em] uppercase">
@@ -64,21 +64,22 @@ export default function Navbar() {
                 </div>
 
                 {/* COLUMN 3: Right Action Buttons (Hidden on Mobile) */}
-                <div className="hidden md:flex items-center justify-end gap-4 font-sans text-[11px] font-bold tracking-widest uppercase">
+                <div className="hidden md:flex gap-2 lg:gap-4 items-center justify-end font-sans text-[11px] font-bold tracking-widest uppercase">
 
-                    <Link href="#" className="flex md:absolute md:left-4 md:top-128 lg:static lg:top-0 items-center group">
+                    {/* Pulsing CTA Discount */}
+                    <Link href="#" className="flex md:hidden lg:block items-center group">
                         {/* The pulsing icon button structure */}
                         <div className="relative inline-block">
                             {/* CTA */}
                             <Link
                                 href="https://www.ilfalconiere.it/en/holiday-offers-tuscany/"
-                                className="group flex items-center border border-white  bg-accent-red-brown/15 backdrop-blur-sm "
+                                className="group flex items-center border border-white  bg-accent-red-brown/30 backdrop-blur-sm "
                             >
                                 {/* Icon + Pulse */}
                                 <div className="relative flex items-center justify-center">
                                     <span className="absolute z-10 inline-flex h-9 w-23.5 border-3 border-white opacity-75 pulse-soft"></span>
                                     {/* Text */}
-                                    <div className="text-white font-semibold leading-tight uppercase px-2 py-1 text-xs">
+                                    <div className="text-white font-medium md:font-semibold leading-tight uppercase px-2  text-xs">
                                         Special<br />Promo
                                     </div>
                                     {/* Spacing */}
@@ -86,7 +87,7 @@ export default function Navbar() {
 
                                     {/* Icon */}
 
-                                    <FaPercentage className="relative text-white text-[44px] bg-accent-red-brown/70 px-2 py-3" />
+                                    <CgMathPercent className="relative text-white font-extralight text-[42px] bg-accent-red-brown/70 px-2  " />
                                 </div>
 
 
@@ -96,8 +97,48 @@ export default function Navbar() {
                     </Link>
 
                     {/* This will eventually trigger our modal, but for now it's a button */}
-                    <button className="border font-serif text-lg uppercase tracking-tighter font-medium border-white px-4 py-1 bg-white/20 hover:bg-white hover:text-brand-olive-dark transition-colors">
-                        Book Here
+                    <button className="border flex md:block items-center gap-2  font-serif text-base uppercase tracking-normal font-semibold md:border-white px-2 md:px-5 py-2 md:bg-white/10 bg-brand-sage hover:bg-white hover:text-brand-olive-dark transition-colors">
+                        Book Here <IoMdSnow className="md:hidden" />
+                    </button>
+
+                </div>
+
+                {/* CTA BOTTOM */}
+                <div className="top-94 md:top-132 lg:top-200 xl:hidden right-2 left-2 fixed flex items-between justify-between font-sans text-[11px] font-bold tracking-widest uppercase">
+
+                    {/* Pulsing CTA Discount */}
+                    <Link href="#" className="flex  top-198 left-8 items-center group">
+                        {/* The pulsing icon button structure */}
+                        <div className="relative inline-block">
+                            {/* CTA */}
+                            <Link
+                                href="https://www.ilfalconiere.it/en/holiday-offers-tuscany/"
+                                className="group flex items-center   bg-accent-red-brown/30 backdrop-blur-sm "
+                            >
+                                {/* Icon + Pulse */}
+                                <div className="relative flex items-center justify-center">
+                                    <span className="absolute z-10 inline-flex h-9 w-23.5 border-3 border-white opacity-75 pulse-soft"></span>
+                                    {/* Text */}
+                                    <div className="text-white font-medium md:font-semibold leading-tight uppercase px-2  text-xs">
+                                        Special<br />Promo
+                                    </div>
+                                    {/* Spacing */}
+
+
+                                    {/* Icon */}
+
+                                    <CgMathPercent className="relative text-white font-extralight text-[42px] bg-accent-red-brown/70 px-2  " />
+                                </div>
+
+
+                            </Link>
+                            {/* End CTA */}
+                        </div>
+                    </Link>
+
+                    {/* This will eventually trigger our modal, but for now it's a button */}
+                    <button className=" flex items-center gap-2  font-serif text-base uppercase tracking-normal font-semibold md:hidden lg:flex px-2 lg:px-5 py-2  bg-brand-sage hover:bg-white hover:text-brand-olive-dark transition-colors">
+                        Book Here <IoMdSnow className="md:hidden lg:block" />
                     </button>
 
                 </div>
