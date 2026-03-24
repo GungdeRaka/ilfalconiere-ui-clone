@@ -16,12 +16,12 @@ export default function Footer() {
     return (
         <footer className="font-sans w-full">
             {/* ===== TOP SECTION (Light Beige) ===== */}
-            <div className="bg-brand-cream text-brand-olive-dark py-16 px-6 lg:px-12">
-                <div className="max-w-350 mx-auto flex flex-col lg:flex-row justify-between gap-16 lg:gap-8">
-                    
+            <div className="bg-brand-cream text-brand-olive-dark py-12 px-4 lg:px-12">
+                <div className="max-w-350 mx-auto grid grid-cols-1 lg:grid-cols-3 justify-between gap-16 lg:gap-8">
+
                     {/* --- LEFT COLUMN: Links & Info --- */}
-                    <div className="flex-1 flex flex-col gap-10">
-                        
+                    <div className="flex-1 lg:col-span-2 flex flex-col gap-10">
+
                         {/* Title Header */}
                         <Link href="https://www.ilfalconiere.it/en/gift-voucher/" className="flex items-center gap-3 w-fit group">
                             <FiGift className="text-2xl text-brand-olive-dark group-hover:text-black transition-colors" />
@@ -31,11 +31,11 @@ export default function Footer() {
                         </Link>
 
                         {/* 2-Col Mobile / 4-Col Desktop Grid */}
-                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-y-12 gap-x-4 text-sm font-extralight font-sans text-brand-sage tracking-tight  leading-[1.8]">
-                            
+                        <div className="grid grid-cols-2 md:grid-cols-6 md:gap-0 gap-x-4 gap-y-6 text-[16px] font-extralight font-sans text-brand-sage tracking-tight leading-[1.8]">
+
                             {/* Col 1: Address */}
-                            <div className="flex flex-col leading-[1.2]">
-                                <p>Loc. San Martino a Bocena, 370 Cortona (AR)</p>
+                            <div className="flex flex-col col-span-2 leading-[1.4]">
+                                <p>Loc. San Martino a <br className="hidden lg:block" />Bocena, 370 Cortona (AR)</p>
                                 <p>T +39.0575.612679</p>
                                 <p>F +39.0575.612927</p>
                                 <a href="mailto:info@ilfalconiere.it" className="hover:text-black transition-colors mt-1">
@@ -44,7 +44,7 @@ export default function Footer() {
                             </div>
 
                             {/* Col 2: Menus A */}
-                            <div className="flex flex-col">
+                            <div className="flex flex-col lg:col-span-2">
                                 <Link href="#" className="hover:text-black transition-colors">The Baracchi Family</Link>
                                 <Link href="#" className="hover:text-black transition-colors">Values and sustainability</Link>
                                 <Link href="#" className="hover:text-black transition-colors">Services</Link>
@@ -72,7 +72,7 @@ export default function Footer() {
 
                     {/* --- RIGHT COLUMN: Socials & Instagram Grid --- */}
                     <div className="flex flex-col items-center lg:items-end w-full lg:w-auto gap-2 lg:gap-4 mt-4 lg:mt-0">
-                        
+
                         {/* Social Icons (Top Right on Desktop, Center on Mobile) */}
                         <div className="flex gap-4 lg:w-full lg:justify-end">
                             <a href="https://www.facebook.com/IlFalconiereRelaisChateaux" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-white flex items-center justify-center shadow-sm text-brand-sage hover:bg-brand-olive-dark hover:text-white transition-all duration-300">
@@ -82,12 +82,12 @@ export default function Footer() {
                                 <FaLinkedinIn className="text-sm" />
                             </a>
                         </div>
-                        
+
                         {/* F Logo & Instagram Grid Wrapper */}
                         <div className="flex flex-col items-center lg:items-start lg:w-fit mt-2">
-                            
+
                             {/* 'F' Logo Icon */}
-                            <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm  font-serif text-xl leading-none mb-6">
+                            <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm  font-serif text-xl leading-none mb-6 lg:mb-0">
                                 <Image src={"/footer-images/floating-f-logo.jpg"}
                                     alt={"Il-Falconiere-Logo"}
                                     height={28}
@@ -98,25 +98,24 @@ export default function Footer() {
 
                             {/* Instagram Wave Layout */}
                             {/* Mobile: 2x2 Grid. Desktop: 5 in a row flexbox */}
-                            <div className="grid grid-cols-3 pt-2 lg:flex lg:flex-row gap-4 lg:gap-3">
+                            <div className="flex flex-row md:flex-wrap gap-3">
                                 {instagramFeed.map((imgSrc, index) => (
-                                    <a 
-                                        href="https://www.instagram.com/ilfalconiere" 
+                                    <a
+                                        href="https://www.instagram.com/ilfalconiere"
                                         target="_blank"
                                         rel="noreferrer"
                                         key={index}
-                                        className={`relative w-40 h-40 lg:w-21 lg:h-21 rounded-xl overflow-hidden block group shadow-sm transition-transform duration-300 hover:scale-105 
-                                            ${index == 1 || index == 4 ? "-translate-y-6" : ""} 
-                                
-                                            ${index >= 3 ? "block lg:hidden" : ""}
+                                        className={`relative aspect-square w-1/3 md:w-1/4 lg:w-1/7 rounded-lg overflow-hidden block group shadow-sm transition-transform duration-300 hover:scale-105 
+                                            ${index %2===0 ? "translate-y-7 md:-translate-y-7 lg:translate-y-7 " : ""} 
+                                            ${index >= 3 ? "hidden lg:hidden md:block" : ""}
                                         `}
                                     >
-                                        <Image 
+                                        <Image
                                             src={imgSrc}
                                             alt={`Instagram post ${index + 1}`}
-                                            fill
-                                            className="object-cover"
-                                            sizes="(max-width: 1024px) 160px, 84px"
+                                            width={200}
+                                            height={200}
+                                            className="w-full h-auto object-cover"
                                         />
                                     </a>
                                 ))}
@@ -128,9 +127,9 @@ export default function Footer() {
             </div>
 
             {/* ===== BOTTOM SECTION (Dark Olive Copyright) ===== */}
-            <div className="bg-brand-olive-dark text-brand-cream/80 py-8 px-6 lg:px-12 text-[11px] font-serif font-light leading-5">
+            <div className="bg-brand-olive-dark  text-brand-cream/80 p-6 lg:px-12 text-[11px] font-serif font-light leading-5">
                 <div className="max-w-350 mx-auto flex flex-col md:flex-row justify-between gap-4 md:gap-12">
-                    
+
                     {/* Left Legal Text */}
                     <div className="md:w-1/2">
                         <p>© 2026 Il Falconiere. All rights reserved. CIN: IT051017A1GB52NTSP</p>

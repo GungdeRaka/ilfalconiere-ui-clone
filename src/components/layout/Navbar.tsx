@@ -23,30 +23,30 @@ export default function Navbar() {
                 }`}
         >
 
-            <div className="max-w-500 px-8 md:px-10 flex justify-between lg:grid-cols-3 md:items-center">
+            <div className="max-w-500 px-4 md:px-10 flex justify-between md:grid md:grid-cols-3 md:items-center">
 
                 {/* COLUMN 1: Left Menu */}
                 <div className="flex flex-col">
 
 
                     {/* Desktop links extracted from the HTML */}
-                    <nav className="hidden lg:flex items-center text-[12px] tracking-[-0.05px] uppercase whitespace-nowrap">
+                    <nav className="hidden md:flex-wrap md:flex  items-center text-[12px] tracking-[-0.05px] uppercase whitespace-nowrap">
                         <Link href="#" className="hover:text-olive-200 transition-colors pr-2.5 font-sans font-semibold">The Relais</Link>
                         <Link href="#" className="hover:text-olive-200 transition-colors pr-2.5 font-sans font-semibold">Gift & Offers</Link>
                         <Link href="#" className="hover:text-olive-200 transition-colors pr-2.5 font-sans font-semibold">Baracchi Winery</Link>
                         <Link href="#" className="hover:text-olive-200 transition-colors pr-2.5 font-sans font-semibold">Shop</Link>
                     </nav>
-                    <button className="flex items-center md:pt-1 gap-3 text-sm font-semibold tracking-tight uppercase font-sans group">
+                    <button className="flex items-center md:pt-1 gap-3 text-sm font-semibold tracking-tight uppercase font-sans group cursor-pointer">
                         MENU
                         <div className="flex flex-col gap-1.5">
-                            <span className="block w-9 font-extralight h-px bg-white duration-300"></span>
-                            <span className="block w-9 font-extralight h-px bg-white transition-transform duration-300"></span>
+                            <span className="block w-8 font-extralight h-px bg-white/70 duration-300"></span>
+                            <span className="block w-8 font-extralight h-px bg-white/70 transition-all duration-300 ease-out group-hover:translate-y-1.5"></span>
                         </div>
                     </button>
                 </div>
 
                 {/* COLUMN 2: Center Logo */}
-                <div className="flex mr-8 flex-col items-center justify-center">
+                <div className="flex  flex-col items-center justify-center">
                     <Link href="/" className="flex flex-col items-center gap-1">
                         <Image
                             src="https://www.ilfalconiere.it/wp-content/uploads/2023/12/il-falconiere-logo-white.png"
@@ -54,7 +54,7 @@ export default function Navbar() {
                             width={280}
                             height={40}
                             priority
-                        className="w-64 md:w-50 lg:w-68 h-auto object-contain"
+                        className="w-68 md:w-50 lg:w-68 h-auto object-contain"
                         />
                         {/* Extracted from your HTML snippet */}
                         <span className="font-sans text-[11px] tracking-[0.3em] uppercase">
@@ -64,9 +64,9 @@ export default function Navbar() {
                 </div>
 
                 {/* COLUMN 3: Right Action Buttons (Hidden on Mobile) */}
-                <div className="hidden lg:flex items-center justify-end gap-4 font-sans text-[11px] font-bold tracking-widest uppercase">
+                <div className="hidden md:flex items-center justify-end gap-4 font-sans text-[11px] font-bold tracking-widest uppercase">
 
-                    <Link href="#" className="flex items-center group">
+                    <Link href="#" className="flex md:absolute md:left-4 md:top-128 lg:static lg:top-0 items-center group">
                         {/* The pulsing icon button structure */}
                         <div className="relative inline-block">
                             {/* CTA */}
