@@ -19,42 +19,42 @@ export default function Navbar() {
 
     return (
         <header
-            className={`fixed top-0 left-0 w-full z-50 transition-colors duration-500 ease-in-out text-white ${isScrolled ? "bg-brand-olive-dark/80 py-2.5 shadow-lg" : "bg-transparent py-6"
+            className={`fixed top-0 pt-3.5 pb-1 md:py-2.5 left-0 w-full z-50 transition-colors duration-500 ease-in-out text-white ${isScrolled ? "bg-brand-olive-dark/90 shadow-lg" : "bg-transparent "
                 }`}
         >
 
-            <div className="max-w-400 mx-auto px-6 md:px-12 grid grid-cols-2 lg:grid-cols-3 items-center">
+            <div className="max-w-500 px-8 md:px-10 flex justify-between lg:grid-cols-3 md:items-center">
 
                 {/* COLUMN 1: Left Menu */}
                 <div className="flex flex-col">
 
 
                     {/* Desktop links extracted from the HTML */}
-                    <nav className=" text-[14px] inline tracking-[-0.05px] uppercase">
-                        <Link href="#" className="hover:text-olive-200 transition-colors pr-3 font-sans font-semibold">The Relais</Link>
-                        <Link href="#" className="hover:text-olive-200 transition-colors pr-3 font-sans font-semibold">Gift & Offers</Link>
-                        <Link href="#" className="hover:text-olive-200 transition-colors pr-3 font-sans font-semibold">Baracchi Winery</Link>
-                        <Link href="#" className="hover:text-olive-200 transition-colors pr-3 font-sans font-semibold">Shop</Link>
+                    <nav className="hidden lg:flex items-center text-[12px] tracking-[-0.05px] uppercase whitespace-nowrap">
+                        <Link href="#" className="hover:text-olive-200 transition-colors pr-2.5 font-sans font-semibold">The Relais</Link>
+                        <Link href="#" className="hover:text-olive-200 transition-colors pr-2.5 font-sans font-semibold">Gift & Offers</Link>
+                        <Link href="#" className="hover:text-olive-200 transition-colors pr-2.5 font-sans font-semibold">Baracchi Winery</Link>
+                        <Link href="#" className="hover:text-olive-200 transition-colors pr-2.5 font-sans font-semibold">Shop</Link>
                     </nav>
-                    <button className="flex items-center pt-1 gap-3 text-[14px] font-bold tracking-[0.15em] uppercase font-sans group">
+                    <button className="flex items-center md:pt-1 gap-3 text-sm font-semibold tracking-tight uppercase font-sans group">
                         MENU
                         <div className="flex flex-col gap-1.5">
-                            <span className="block w-8 h-px bg-white group-hover:w-10 transition-all duration-300"></span>
-                            <span className="block w-8 h-px bg-white group-hover:w-10 transition-all duration-300"></span>
+                            <span className="block w-9 font-extralight h-px bg-white duration-300"></span>
+                            <span className="block w-9 font-extralight h-px bg-white transition-transform duration-300"></span>
                         </div>
                     </button>
                 </div>
 
                 {/* COLUMN 2: Center Logo */}
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex mr-8 flex-col items-center justify-center">
                     <Link href="/" className="flex flex-col items-center gap-1">
                         <Image
                             src="https://www.ilfalconiere.it/wp-content/uploads/2023/12/il-falconiere-logo-white.png"
                             alt="Il Falconiere Logo"
-                            width={400}
+                            width={280}
                             height={40}
                             priority
-                            className="w-44 md:w-50 lg:w-68 h-auto object-contain"
+                        className="w-64 md:w-50 lg:w-68 h-auto object-contain"
                         />
                         {/* Extracted from your HTML snippet */}
                         <span className="font-sans text-[11px] tracking-[0.3em] uppercase">

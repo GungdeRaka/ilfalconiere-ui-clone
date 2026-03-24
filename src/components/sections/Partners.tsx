@@ -14,29 +14,32 @@ export default function Partners() {
                 </div>
 
                 {/* ===== ROW 1 ===== */}
-                <div className="flex flex-wrap lg:flex-row justify-center items-center gap-x-12 gap-y-10 mb-16 opacity-70 grayscale">
+                <div className="grid grid-cols-2 md:flex md:flex-wrap justify-items-center justify-center items-center gap-x-14 gap-y-12 mb-16  ">
 
-                    <Logo src="relais" w={80} h={90} />
-                    <Logo src="virtuoso" w={140} h={70} />
-                    <Logo src="autentico" w={140} h={40} />
-                    <Logo src="affluent" w={140} h={50} />
-                    <Logo src="celebrated" w={140} h={60} />
+                    <Logo src="relais" w={45} h={50} />
+                    <Logo src="virtuoso" w={110} h={40} />
+                    {/* <Logo src="autentico" w={140} h={40} /> */}
+                    <Logo src="autentico" w={120} h={20} />
+                    <Logo src="affluent" w={120} h={30} />
+                    <Logo src="celebrated" w={120} h={40} />
                     <Logo src="lesoste" w={60} h={60} />
-                    <Logo src="serendipians" w={100} h={100} />
-
+                    <div className="col-span-2 flex justify-center">
+                        <Logo src="serendipians" w={80} h={80} />
+                    </div>
                 </div>
 
                 {/* ===== ROW 2 ===== */}
-                <div className="flex flex-wrap justify-center items-center gap-x-16 gap-y-10 opacity-70 grayscale">
+                <div className="grid grid-cols-2 md:flex md:flex-wrap justify-items-center justify-center items-center gap-x-16 gap-y-10 ">
 
-                    <Logo src="michelin" w={100} h={70} />
-                    <Logo src="internove" w={140} h={50} />
-                    <Logo src="hrz" w={90} h={70} />
-                    <Logo src="waterstone" w={120} h={50} />
-                    <Logo src="eurotoques" w={110} h={60} />
+                    <Logo src="michelin" w={70} h={40} />
+                    <Logo src="internove" w={110} h={20} />
+                    <Logo src="hrz" w={65} h={45} />
+                    <Logo src="waterstone" w={100} h={30} />
+                    <Logo src="eurotoques" w={100} h={50} />
                     <Logo src="porcreo" w={90} h={60} />
 
                 </div>
+
 
                 {/* ===== CO FUNDED ===== */}
                 <div className="mt-24 text-center">
