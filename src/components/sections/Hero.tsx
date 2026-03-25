@@ -23,9 +23,9 @@ export default function Hero() {
                     allow="autoplay; fullscreen"
                 />
                 {/* Overlay Gambar (Dibuat absolute agar numpuk di atas video) */}
-                <div className="absolute inset-0 bg-black/40 pointer-events-none z-10"></div>
+                <div className="absolute inset-0 bg-black/10 pointer-events-none z-10"></div>
             </div>
-            <div className="top-2/5 md:top-7/10 lg:9/10 text-brand-cream z-10 absolute mx-auto ">
+            <div className="top-3/5 md:top-7/10 lg:9/10 text-brand-cream z-10 absolute mx-auto ">
                 <motion.div className="flex flex-col items-center gap-y-3 justify-center">
 
                     {/* --- HEADING --- */}
