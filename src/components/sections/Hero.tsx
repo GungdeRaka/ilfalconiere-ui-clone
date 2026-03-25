@@ -10,9 +10,9 @@ export default function Hero() {
 
     // Create the Parallax Effect for the text
     const { scrollY } = useScroll();
-    const headingY = useTransform(scrollY, [100, 500], [0, -100]);
-    const headingOpacity = useTransform(scrollY, [100, 500], [1, 0]);
-    const menuLogoOpacity = useTransform(scrollY, [150, 400], [1, 0]);
+    const headingY = useTransform(scrollY, [0, 150, 600], [0, 0, -150]);
+    const headingOpacity = useTransform(scrollY, [0, 200, 600], [1, 1, 0]);
+    const menuLogoOpacity = useTransform(scrollY, [0, 200, 600], [1, 1, 0]);
 
     return (
         <section ref={ref} className="relative w-screen h-auto  bg-brand-olive-dark flex items-start justify-center">
@@ -25,7 +25,7 @@ export default function Hero() {
                 {/* Overlay Gambar (Dibuat absolute agar numpuk di atas video) */}
                 <div className="absolute inset-0 bg-black/40 pointer-events-none z-10"></div>
             </div>
-            <div className="top-2/5 md:top-8/10 lg:9/10 text-brand-cream z-10 absolute mx-auto ">
+            <div className="top-2/5 md:top-7/10 lg:9/10 text-brand-cream z-10 absolute mx-auto ">
                 <motion.div className="flex flex-col items-center gap-y-3 justify-center">
 
                     {/* --- HEADING --- */}
@@ -33,7 +33,7 @@ export default function Hero() {
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, ease: "easeOut",delay:0.9 }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.9 }}
                     >
                         {/* Wrapper 2: Menangani efek saat di-SCROLL (Terangkat & Fade out) */}
                         <motion.h2
