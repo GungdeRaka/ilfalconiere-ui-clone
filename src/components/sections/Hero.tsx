@@ -25,9 +25,8 @@ export default function Hero() {
                 {/* Overlay Gambar (Dibuat absolute agar numpuk di atas video) */}
                 <div className="absolute inset-0 bg-black/10 pointer-events-none z-10"></div>
             </div>
-            <div className="top-2/5 md:top-4/6 lg:top-4/6 xl:top-4/6 text-brand-cream z-10 absolute  ">
+            <div className="top-[40vh] md:top-[95vh] lg:top-[50vh] xl:top-[74vh]  mb-vh text-brand-cream z-10 absolute">
                 <motion.div className="flex flex-col items-center gap-y-3 justify-center">
-
                     {/* --- HEADING --- */}
                     {/* Wrapper 1: Menangani animasi saat website BARU DIBUKA (Fade in & slide up) */}
                     <motion.div

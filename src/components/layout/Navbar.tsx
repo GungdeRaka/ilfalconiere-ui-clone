@@ -72,7 +72,7 @@ export default function Navbar() {
                         <div className="relative inline-block">
                             {/* CTA */}
                             <div
-                                
+
                                 className="group flex items-center border border-white  bg-accent-red-brown/30 backdrop-blur-sm "
                             >
                                 {/* Icon + Pulse */}
@@ -107,31 +107,27 @@ export default function Navbar() {
                 <div className="top-9/10 md:top-13/14 lg:flex right-2 left-2 fixed flex items-between justify-between font-sans text-[11px] font-bold tracking-widest uppercase">
 
                     {/* Pulsing CTA Discount */}
-                    <Link  href="https://www.ilfalconiere.it/en/holiday-offers-tuscany/" className="flex top-198 left-5 items-center group">
-                        {/* The pulsing icon button structure */}
-                        <div className="relative inline-block">
-                            {/* CTA */}
-                            <div className="group flex items-center bg-accent-red-brown/30 backdrop-blur-sm ">
-                                {/* Icon + Pulse */}
-                                <div className="relative  flex items-center justify-center">
-                                    <span className="absolute z-10 inline-flex h-9 w-23.5 border-3 border-white opacity-75 pulse-soft"></span>
-                                    {/* Text */}
-                                    <div className="text-white font-medium md:font-semibold leading-tight uppercase px-2  text-xs">
-                                        Special<br />Promo
-                                    </div>
-                                    {/* Spacing */}
-                                    {/* Icon */}
-                                    <CgMathPercent className="relative text-white font-extralight text-[42px] bg-accent-red-brown/70 px-2  " />
+                    <Link href="https://www.ilfalconiere.it/en/holiday-offers-tuscany/" className="flex top-198 left-5 items-center group">
+
+                        {/* CTA */}
+                        <div className="group flex items-center bg-accent-red-brown/30 backdrop-blur-sm ">
+                            {/* Icon + Pulse */}
+                            <div className="relative md:flex lg:hidden flex items-center justify-center">
+                                <span className="absolute z-10 inline-flex h-9 w-23.5 border-3 border-white opacity-75 pulse-soft"></span>
+                                {/* Text */}
+                                <div className="text-white font-medium md:font-semibold leading-tight uppercase px-2  text-xs">
+                                    Special<br />Promo
                                 </div>
-
-
+                                {/* Spacing */}
+                                {/* Icon */}
+                                <CgMathPercent className="relative text-white font-extralight text-[42px] bg-accent-red-brown/70 px-2  " />
                             </div>
-                            {/* End CTA */}
                         </div>
+                        {/* End CTA */}
                     </Link>
 
                     {/* This will eventually trigger our modal, but for now it's a button */}
-                    <button className=" flex items-center gap-2  font-serif text-base uppercase tracking-normal font-semibold md:hidden lg:flex xl:hidden px-2 lg:px-5 py-2  bg-brand-sage hover:bg-white hover:text-brand-olive-dark transition-colors">
+                    <button className=" flex items-center gap-2  font-serif text-base uppercase tracking-normal font-semibold md:hidden lg:flex lg:hidden px-2 lg:px-5 py-2  bg-brand-sage hover:bg-white hover:text-brand-olive-dark transition-colors">
                         Book Here <IoMdSnow className="md:hidden lg:block" />
                     </button>
 

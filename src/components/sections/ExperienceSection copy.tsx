@@ -82,7 +82,7 @@ export default function ExperienceSection() {
                         src="/images/il-falconiere-relais-chateaux-fallback.webp" 
                         alt="Woman walking down stone steps in Tuscany"
                         fill
-                        className="object-cover object-center"
+                        className= "object-cover object-center"
                         sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 </div>
