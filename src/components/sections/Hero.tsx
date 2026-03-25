@@ -16,16 +16,16 @@ export default function Hero() {
 
     return (
         <section ref={ref} className="relative w-screen h-auto  bg-brand-olive-dark flex items-start justify-center">
-            <div className="relative w-screen h-screen md:h-[140vh] lg:h-screen overflow-hidden bg-black">
+            <div className="relative w-screen h-screen md:h-[145vh] lg:h-screen overflow-hidden bg-brand-olive-dark">
                 <iframe
                     src="https://player.vimeo.com/video/1166343345?autoplay=1&muted=1&loop=1&background=1"
-                    className="absolute top-1/2 left-1/2 w-screen h-[56.25vw] md:min-h-[140vh] md:min-w-[248.88vh] min-w-[177.77vh] min-h-screen -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+                    className={`absolute top-1/2 left-1/2 w-screen h-[56.25vw] md:min-h-[145vh] md:min-w-[257.77vh] min-w-[177.77vh] min-h-screen -translate-x-1/2 -translate-y-1/2 pointer-events-none`}
                     allow="autoplay; fullscreen"
                 />
                 {/* Overlay Gambar (Dibuat absolute agar numpuk di atas video) */}
                 <div className="absolute inset-0 bg-black/10 pointer-events-none z-10"></div>
             </div>
-            <div className="top-3/5 md:top-7/10 lg:9/10 text-brand-cream z-10 absolute mx-auto ">
+            <div className="top-2/5 md:top-4/6 lg:top-4/6 xl:top-4/6 text-brand-cream z-10 absolute  ">
                 <motion.div className="flex flex-col items-center gap-y-3 justify-center">
 
                     {/* --- HEADING --- */}
@@ -38,7 +38,7 @@ export default function Hero() {
                         {/* Wrapper 2: Menangani efek saat di-SCROLL (Terangkat & Fade out) */}
                         <motion.h2
                             style={{ y: headingY, opacity: headingOpacity }}
-                            className="text-4xl md:text-5xl lg:text-6xl text-center font-serif font-normal tracking-tight"
+                            className="text-4xl md:text-5xl lg:text-6xl text-center font-serif font-normal tracking-tight mx-10 lg:mx-14 "
                         >
                             All the flavor of a beautiful dream
                         </motion.h2>
