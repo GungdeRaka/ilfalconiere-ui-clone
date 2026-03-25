@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 
 export default function ExperienceSection() {
@@ -29,7 +30,7 @@ export default function ExperienceSection() {
                 <div className="flex justify-between w-screen px-4 md:h-[40vh] lg:h-screen md:w-auto items-center md:flex-col ">
                     {/* Icon Play Button */}
                     <motion.button
-                        style={isMobile?{}:{ x: playBtnX }}
+                        style={isMobile ? {} : { x: playBtnX }}
                         className="flex justify-between items-center gap-1 md:-ml-12 md:flex-col lg:flex-row lg:gap-3 text-accent-red-brown/40 font-sans cursor-pointer">
                         <div className="h-20 w-20 lg:h-24 lg:w-24 border-[3px] lg:border-4 rounded-full flex justify-center items-center">
                             {/* Simple Play Icon SVG */}
@@ -42,8 +43,8 @@ export default function ExperienceSection() {
                         </p>
                     </motion.button>
                     {/* "Traveler" Sticker */}
-                    <motion.div style={isMobile?{}:{ y: badgeY }}>
-                        <Image 
+                    <motion.div style={isMobile ? {} : { y: badgeY }}>
+                        <Image
                             src="/logos/traveler-readers-choise-2023-il-falconiere-relais-chateaux-tuscany.png"
                             alt="Conde Nast Traveler 2023"
                             width={120}
@@ -70,6 +71,48 @@ export default function ExperienceSection() {
                     className=" w-full h-2 bg-accent-red-brown/20"
                 />
             </div>
+        </div>
+        {/* Description Section (Exactly below the image) */}
+        <div className="py-24">
+            {/* Descriptions's title */}
+            <h3 className="uppercase pb-14 text-base font-sans text-accent-red-brown/70 tracking-[0.2em]">
+                Il Falconiere - Relais, Restaurant & Spa
+            </h3>
+            {/* Description's content */}
+            <div>
+                {/* Main Copywriting */}
+                <h2 className="text-[32px]/10 font-serif text-brand-sage/95 pb-8 ">
+                    A love for the land and ancient traditions in an elegant wine resort in the heart of Tuscany
+                </h2>
+                {/* Sub-copywriting + text button */}
+                <div>
+                    <p className="font-sans text-brand-olive-dark pb-12 font-medium text-base/6 tracking-[0.15em] ">
+                        A magnificent 17th-century villa transformed into an exclusive residence of charm where one can spend precious moments for the soul, amidst the fragrances of a sunny land.
+                    </p>
+                    
+
+                        <Link
+                            href="#"
+                            // Tambahkan class "group" di sini agar elemen di dalamnya bisa merespons saat ini di-hover
+                            className="relative group inline-flex items-center justify-center py-4 px-1 cursor-pointer"
+                        >
+                            {/* === GARIS ATAS (ANIMASI) === */}
+                            {/* Posisi awal: bottom-0 (nempel dengan garis bawah) & opacity-0 (tembus pandang) */}
+                            {/* Saat Hover: bottom-full (naik ke paling atas) & opacity-100 (muncul) */}
+                            <span className="absolute bottom-0 left-0 w-full h-px bg-brand-olive-dark opacity-0 transition-all duration-500 ease-out group-hover:bottom-full group-hover:opacity-100" />
+
+                            {/* === TEKS === */}
+                            <span className="font-sans uppercase text-[14px] tracking-[0.4em] text-brand-olive-dark font-medium z-10">
+                                {/* Menggunakan &nbsp; untuk memberi jarak ekstra lebar antara READ dan HERE sesuai gambar */}
+                                R E A D &nbsp;&nbsp;&nbsp; H E R E
+                            </span>
+
+                            {/* === GARIS BAWAH (STATIS) === */}
+                            <span className="absolute bottom-0 left-0 w-full h-px bg-brand-olive-dark" />
+                        </Link>
+
+                    </div>
+                </div>
         </div>
     </section>
 }
