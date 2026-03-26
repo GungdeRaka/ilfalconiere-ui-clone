@@ -6,8 +6,15 @@ export default function Home() {
     <div className="w-full flex flex-col items-center">
       {/* 1. Hero Section with Video */}
       <Hero />
-      <ExperienceSection />
       {/* Experience section */}
+      <ExperienceSection />
+      
+      {/* Accommodation */}
+
+      {/* RestaurantSection */}
+
+      {/* Spa Sectiom */}
+      {/* Gallery Secyion */}
     </div>
   );
 }

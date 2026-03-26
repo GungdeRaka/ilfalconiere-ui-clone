@@ -18,10 +18,10 @@ export default function ExperienceSection() {
     const playBtnX = useTransform(scrollYProgress, [0, 1], [230, -50]);
     const badgeY = useTransform(scrollYProgress, [0, 1], [350, -500]);
     const progressScaleX = useTransform(scrollYProgress, [0.3, 0.8], [0, 1]);
+    const progressScaleX2 = useTransform(scrollYProgress, [0.5, 0.95], [0, 1]);
 
-
-    return <section ref={sectionRef} className="py-12 md:py-24 px-6 overflow-hidden bg-brand-cream w-full">
-        <div>
+    return <section ref={sectionRef} className="py-12 md:py-24 overflow-hidden bg-brand-cream w-full">
+        <div className="px-6 ">
             {/* header */}
             <h2 className="flex justify-start lg:mr-92 uppercase text-base/7 md:text-xl/7 md:font-medium tracking-[1em] text-brand-olive-dark font-sans">
                 An Authentic Tuscan Experience
@@ -66,21 +66,21 @@ export default function ExperienceSection() {
                     />
                 </div>
             </div>
+        </div>
             <div className="hidden md:block w-full h-2 bg-brand-olive-dark/10">
                 <motion.div
                     style={{ scaleX: progressScaleX, originX: 0 }}
                     className=" w-full h-2 bg-accent-red-brown/20"
                 />
             </div>
-        </div>
         {/* Description Section (Exactly below the image) */}
-        <div className="py-24">
+        <div className="py-24 px-6 ">
             {/* Descriptions's title */}
             <h3 className="uppercase pb-14 text-base font-sans text-accent-red-brown/70 tracking-[0.2em]">
                 Il Falconiere - Relais, Restaurant & Spa
             </h3>
             {/* Description's content */}
-            <div className="flex flex-col h-auto max-w-112.5 md:max-w-screen md:flex-row md:gap-10 ">
+            <div className="flex pb-10 flex-col h-auto max-w-112.5 md:max-w-screen md:flex-row md:gap-10 ">
                 {/* Main Copywriting */}
                 <h2 className="text-[32px]/10 lg:text-[52px]/14 font-serif text-brand-sage/95 pb-8 ">
                     A love for the land and ancient traditions in an elegant wine resort in the heart of Tuscany
@@ -90,18 +90,10 @@ export default function ExperienceSection() {
                     <p className="font-sans text-brand-olive-dark pb-12 font-medium text-base/6 lg:text-base/8 tracking-[0.15em] ">
                         A magnificent 17th-century villa transformed into an exclusive residence of charm where one can spend precious moments for the soul, amidst the fragrances of a sunny land.
                     </p>
-
-
                     <Link
                         href="#"
-                        // Tambahkan class "group" di sini agar elemen di dalamnya bisa merespons saat ini di-hover
-                        className="relative group inline-flex items-center justify-center py-4 px-1 cursor-pointer"
-                    >
-                        {/* === GARIS ATAS (ANIMASI) === */}
-                        {/* Posisi awal: bottom-0 (nempel dengan garis bawah) & opacity-0 (tembus pandang) */}
-                        {/* Saat Hover: bottom-full (naik ke paling atas) & opacity-100 (muncul) */}
+                        className="relative group inline-flex items-center justify-center py-4 px-1 cursor-pointer">
                         <span className="absolute bottom-0 left-0 w-full h-px bg-brand-olive-dark opacity-0 transition-all duration-500 ease-out group-hover:bottom-full group-hover:opacity-100" />
-
                         {/* === TEKS === */}
                         <span className="font-sans uppercase text-[14px] tracking-[0.4em] text-brand-olive-dark font-medium z-10">
                             {/* Menggunakan &nbsp; untuk memberi jarak ekstra lebar antara READ dan HERE sesuai gambar */}
@@ -113,8 +105,17 @@ export default function ExperienceSection() {
                     </Link>
 
                 </div>
+
             </div>
+            </div>
+            <div className="hidden  md:block w-full h-2 bg-brand-olive-dark/10">
+                <motion.div
+                    style={{ scaleX: progressScaleX2, originX: 1 }}
+                    className="w-full h-2 bg-accent-red-brown/20"
+                // Catatan: sesuaikan warnanya dengan milikmu jika menggunakan bg-accent-red-brown/20
+                />
         </div>
+
     </section>
 }
 
