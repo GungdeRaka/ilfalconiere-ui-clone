@@ -76,7 +76,7 @@ export default function Hero() {
                         style={{ opacity: menuLogoOpacity }}
                     >
                         <Image
-                            src={"/logos/relais-chateaux-il-borro-toscana-white.svg"}
+                            src={"/images/logos/relais-chateaux-il-borro-toscana-white.svg"}
                             width={50}
                             height={50}
                             alt="relais-chateaux-il-borro-toscana"
