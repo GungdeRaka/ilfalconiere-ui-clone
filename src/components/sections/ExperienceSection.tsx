@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+
 import { useRef, useState, useEffect } from "react";
 
 export default function ExperienceSection() {
@@ -16,11 +16,11 @@ export default function ExperienceSection() {
     const isMobile = useIsMobile();
     // Bergerak dari kiri ke kanan saat scroll ke atas (atau kanan ke kiri saat scroll ke bawah)
     const playBtnX = useTransform(scrollYProgress, [0, 1], [230, -50]);
-    const badgeY = useTransform(scrollYProgress, [0, 1], [350, -500]);
+    const badgeY = useTransform(scrollYProgress, [0, 1], [400, -500]);
     const progressScaleX = useTransform(scrollYProgress, [0.3, 0.8], [0, 1]);
     const progressScaleX2 = useTransform(scrollYProgress, [0.5, 0.95], [0, 1]);
 
-    return <section ref={sectionRef} className="py-12 md:py-24 overflow-hidden bg-brand-cream w-full">
+    return <section ref={sectionRef} className="pt-12 md:pt-24 overflow-hidden bg-brand-cream w-full">
         <div className="px-6 ">
             {/* header */}
             <h2 className="flex justify-start lg:mr-92 uppercase text-base/7 md:text-xl/7 md:font-medium tracking-[1em] text-brand-olive-dark font-sans">
@@ -67,12 +67,12 @@ export default function ExperienceSection() {
                 </div>
             </div>
         </div>
-            <div className="hidden md:block w-full h-2 bg-brand-olive-dark/10">
-                <motion.div
-                    style={{ scaleX: progressScaleX, originX: 0 }}
-                    className=" w-full h-2 bg-accent-red-brown/20"
-                />
-            </div>
+        <div className="hidden md:block w-full h-2 bg-brand-olive-dark/10">
+            <motion.div
+                style={{ scaleX: progressScaleX, originX: 0 }}
+                className=" w-full h-2 bg-accent-red-brown/20"
+            />
+        </div>
         {/* Description Section (Exactly below the image) */}
         <div className="py-24 px-6 ">
             {/* Descriptions's title */}
@@ -82,15 +82,27 @@ export default function ExperienceSection() {
             {/* Description's content */}
             <div className="flex pb-10 flex-col h-auto max-w-112.5 md:max-w-screen md:flex-row md:gap-10 ">
                 {/* Main Copywriting */}
-                <h2 className="text-[32px]/10 lg:text-[52px]/14 font-serif text-brand-sage/95 pb-8 ">
+                <motion.h2
+                    initial={{ opacity: 0, x: -100 }} // Mulai dari luar layar sebelah kiri (-100px)
+                    animate={{ opacity: 1, x: 0 }}    // Berakhir di posisi aslinya (0)
+                    transition={{ duration: 1.2 }}
+                    className="text-[32px]/10 lg:text-[52px]/14 font-serif text-brand-sage/95 pb-8 ">
                     A love for the land and ancient traditions in an elegant wine resort in the heart of Tuscany
-                </h2>
+                </motion.h2>
                 {/* Sub-copywriting + text button */}
                 <div>
-                    <p className="font-sans text-brand-olive-dark pb-12 font-medium text-base/6 lg:text-base/8 tracking-[0.15em] ">
+                    <motion.p
+                        initial={{ opacity: 0, y: -100 }} // Mulai dari luar layar sebelah kiri (-100px)
+                        animate={{ opacity: 1, y: 0 }}    // Berakhir di posisi aslinya (0)
+                        transition={{ duration: 1.2 }}
+                        className="font-sans animate-slide-left text-brand-olive-dark pb-12 font-medium text-base/6 lg:text-base/8 tracking-[0.15em] ">
                         A magnificent 17th-century villa transformed into an exclusive residence of charm where one can spend precious moments for the soul, amidst the fragrances of a sunny land.
-                    </p>
-                    <Link
+                    </motion.p>
+                    <motion.a
+                        initial={{ opacity: 0, y: -100 }} // Mulai dari luar layar sebelah kiri (-100px)
+                        animate={{ opacity: 1, y: 0 }}    // Berakhir di posisi aslinya (0)
+                        transition={{ duration: 1.2 }}
+
                         href="#"
                         className="relative group inline-flex items-center justify-center py-4 px-1 cursor-pointer">
                         <span className="absolute bottom-0 left-0 w-full h-px bg-brand-olive-dark opacity-0 transition-all duration-500 ease-out group-hover:bottom-full group-hover:opacity-100" />
@@ -102,18 +114,18 @@ export default function ExperienceSection() {
 
                         {/* === GARIS BAWAH (STATIS) === */}
                         <span className="absolute bottom-0 left-0 w-full h-px bg-brand-olive-dark" />
-                    </Link>
+                    </motion.a>
 
                 </div>
 
             </div>
-            </div>
-            <div className="hidden  md:block w-full h-2 bg-brand-olive-dark/10">
-                <motion.div
-                    style={{ scaleX: progressScaleX2, originX: 1 }}
-                    className="w-full h-2 bg-accent-red-brown/20"
-                // Catatan: sesuaikan warnanya dengan milikmu jika menggunakan bg-accent-red-brown/20
-                />
+        </div>
+        <div className="hidden  md:block w-full h-2 bg-brand-olive-dark/10">
+            <motion.div
+                style={{ scaleX: progressScaleX2, originX: 1 }}
+                className="w-full h-2 bg-accent-red-brown/20"
+            // Catatan: sesuaikan warnanya dengan milikmu jika menggunakan bg-accent-red-brown/20
+            />
         </div>
 
     </section>

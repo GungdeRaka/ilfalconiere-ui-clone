@@ -76,17 +76,18 @@ interface LogoProps {
     w: number;
     h: number;
 }
-function Logo({ src, w, h, }: LogoProps) {
+function Logo({ src, w, }: LogoProps) {
     return (
         <div
             className="flex items-center justify-center"
-            style={{ width: w, height: h }}
+            style={{ width: w, }}
         >
             <Image
                 src={`/logos/${src}.png`}
                 alt={`${src}'s logo`}
                 width={w}
-                height={h}
+                height={0}
+                style={{ height: "auto" }}
                 className="object-contain opacity-80 hover:opacity-100 transition duration-300"
             />
         </div>
