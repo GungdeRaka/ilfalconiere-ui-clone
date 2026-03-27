@@ -6,11 +6,11 @@ import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 export default function Footer() {
     // Extracted from your provided Elementor HTML
     const instagramFeed = [
-   "/footer-images/first-post.jpg",
-   "/footer-images/second-post.jpg",
-   "/footer-images/third-post.jpg",
-   "/footer-images/fourth-post.jpg",
-   "/footer-images/fifth-post.jpg"
+   "/images/footer-images/first-post.jpg",
+   "/images/footer-images/second-post.jpg",
+   "/images/footer-images/third-post.jpg",
+   "/images/footer-images/fourth-post.jpg",
+   "/images/footer-images/fifth-post.jpg"
     ];
 
     return (
