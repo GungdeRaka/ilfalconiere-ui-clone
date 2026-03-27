@@ -16,7 +16,7 @@ export default function ExperienceSection() {
     const isMobile = useIsMobile();
     // Bergerak dari kiri ke kanan saat scroll ke atas (atau kanan ke kiri saat scroll ke bawah)
     const playBtnX = useTransform(scrollYProgress, [0, 1], [230, -50]);
-    const badgeY = useTransform(scrollYProgress, [0, 1], [400, -500]);
+    const badgeY = useTransform(scrollYProgress, [0, 1], [90, -300]);
     const progressScaleX = useTransform(scrollYProgress, [0.3, 0.8], [0, 1]);
     const progressScaleX2 = useTransform(scrollYProgress, [0.5, 0.95], [0, 1]);
 
