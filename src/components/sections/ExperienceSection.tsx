@@ -16,7 +16,7 @@ export default function ExperienceSection() {
     const isMobile = useIsMobile();
     // Bergerak dari kiri ke kanan saat scroll ke atas (atau kanan ke kiri saat scroll ke bawah)
     const playBtnX = useTransform(scrollYProgress, [0, 1], [230, -50]);
-    const badgeY = useTransform(scrollYProgress, [0, 1], [90, -300]);
+    const badgeY = useTransform(scrollYProgress, [0, 1], [90, -130]);
     const progressScaleX = useTransform(scrollYProgress, [0.3, 0.8], [0, 1]);
     const progressScaleX2 = useTransform(scrollYProgress, [0.5, 0.95], [0, 1]);
 
@@ -46,7 +46,7 @@ export default function ExperienceSection() {
                     {/* "Traveler" Sticker */}
                     <motion.div style={isMobile ? {} : { y: badgeY }}>
                         <Image
-                            src="/logos/traveler-readers-choise-2023-il-falconiere-relais-chateaux-tuscany.png"
+                            src="/images/logos/traveler-readers-choise-2023-il-falconiere-relais-chateaux-tuscany.png"
                             alt="Conde Nast Traveler 2023"
                             width={120}
                             height={120}

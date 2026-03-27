@@ -88,7 +88,7 @@ export default function Footer() {
 
                             {/* 'F' Logo Icon */}
                             <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm  font-serif text-xl leading-none mb-6 lg:mb-0">
-                                <Image src={"/footer-images/floating-f-logo.jpg"}
+                                <Image src={"/images/footer-images/floating-f-logo.jpg"}
                                     alt={"Il-Falconiere-Logo"}
                                     height={28}
                                     width={28}

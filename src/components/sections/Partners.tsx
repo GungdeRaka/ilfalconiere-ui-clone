@@ -49,7 +49,6 @@ export default function Partners() {
 
                     <div className="flex justify-center items-center gap-14">
                         <div className="flex flex-wrap justify-start gap-2 items-center">
-
                             <div className="flex justify-center items-center border-2 w-14 h-10  border-brand-sage">
                                 <SiEuropeanunion className="m-auto text-3xl mt-auto font-black text-brand-olive-dark" />
                             </div>
@@ -83,7 +82,7 @@ function Logo({ src, w, }: LogoProps) {
             style={{ width: w, }}
         >
             <Image
-                src={`/logos/${src}.png`}
+                src={`/images/logos/${src}.png`}
                 alt={`${src}'s logo`}
                 width={w}
                 height={0}

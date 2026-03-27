@@ -49,7 +49,7 @@ export default function Navbar() {
                 <div className="flex flex-col items-center justify-center">
                     <Link href="/" className="flex flex-col items-center gap-1">
                         <Image
-                            src="/logos/il-falconiere-logo-white.png"
+                            src="/images/logos/il-falconiere-logo-white.png"
                             alt="Il Falconiere Logo"
                             width={280}
                             height={40}
@@ -127,7 +127,7 @@ export default function Navbar() {
                     </Link>
 
                     {/* This will eventually trigger our modal, but for now it's a button */}
-                    <button className=" flex items-center gap-2  font-serif text-base uppercase tracking-normal font-semibold md:hidden lg:flex lg:hidden px-2 lg:px-5 py-2  bg-brand-sage hover:bg-white hover:text-brand-olive-dark transition-colors">
+                    <button className=" flex items-center gap-2  font-serif text-base uppercase tracking-normal font-semibold md:hidden lg:hidden px-2 lg:px-5 py-2  bg-brand-sage hover:bg-white hover:text-brand-olive-dark transition-colors">
                         Book Here <IoMdSnow className="md:hidden lg:block" />
                     </button>
 
